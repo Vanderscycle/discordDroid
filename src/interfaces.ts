@@ -1,4 +1,5 @@
 import {
+  ApplicationCommandResolvable,
   ChatInputApplicationCommandData,
   CommandInteraction,
   CommandInteractionOptionResolver,
@@ -20,3 +21,11 @@ export type CommandType = {
   run: RunFunction
 
 } & ChatInputApplicationCommandData
+
+
+//INFO: client 
+
+export interface RegisterCommandsOptions {
+  guildId?: string
+  commands: ApplicationCommandResolvable[]
+}
