@@ -1,8 +1,9 @@
 import {
-  ApplicationCommandResolvable,
+  ApplicationCommandDataResolvable,
   ChatInputApplicationCommandData,
   CommandInteraction,
   CommandInteractionOptionResolver,
+  GuildMember,
   PermissionResolvable
 } from "discord.js";
 import { ExtendedClient } from "./structures/client";
@@ -27,5 +28,13 @@ export type CommandType = {
 
 export interface RegisterCommandsOptions {
   guildId?: string
-  commands: ApplicationCommandResolvable[]
+  commands: ApplicationCommandDataResolvable[]
 }
+
+//INFO: commands
+
+export interface ExtendedInteraction extends CommandInteraction {
+  member: GuildMember;
+}
+
+
