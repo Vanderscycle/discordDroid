@@ -1,11 +1,49 @@
 {
-	"dependencies": {
-		"discord.js": "^13.6.0",
-		"discordx": "^9.1.11",
-		"reflect-metadata": "^0.1.13"
-	},
-	"devDependencies": {
-		"@types/node": "^17.0.8",
-		"typescript": "^4.5.4"
-	}
+  "name": "discord.ts-example",
+  "version": "1.0.0",
+  "description": "leveraging the power of botting",
+  "keywords": [
+    "discord.ts",
+    "bot",
+    "discord",
+    "typescript"
+  ],
+  "homepage": "https://github.com/oceanroleplay/discord.ts-example#readme",
+  "bugs": {
+    "url": "https://github.com/oceanroleplay/discord.ts-example/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oceanroleplay/discord.ts-example.git"
+  },
+  "license": "MIT",
+  "author": "Henri <hvandersleyen@gmail.com> (https://github.com/vanderscycle)",
+  "contributors": [],
+  "type": "module",
+  "main": "build/main.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --loader ts-node/esm/transpile-only src/main.ts",
+    "start": "nodemon --exec node --loader ts-node/esm/transpile-only src/main.ts",
+    "serve": "node build/main.js"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.11.0",
+    "@discordjs/rest": "^0.2.0-canary.0",
+    "@discordx/koa": "^1.0.6",
+    "@koa/router": "^10.1.1",
+    "@types/koa-router": "^7.4.4",
+    "discord-api-types": "^0.26.1",
+    "discord.js": "^13.6.0",
+    "discordx": "^9.1.11",
+    "koa": "*",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.4.0",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "dotenv": "^12.0.3",
+    "typescript": "^4.5.4"
+  }
 }
